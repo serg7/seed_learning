@@ -1,0 +1,11 @@
+_admin_homepage:
+    path:     /admin
+    defaults: { _controller: LearningAdminBundle:Index:index }
+
+_admin_groups:
+    path:     /admin/groups
+    defaults: { _controller: LearningAdminBundle:Group:index }
+
+_admin_group_remove:
+    path:     /admin/group/{id}/remove
+    defaults: { _controller: LearningAdminBundle:Group:remove }

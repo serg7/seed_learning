@@ -1,0 +1,49 @@
+{% extends 'LearningFrontBundle::layout.html.twig' %}
+
+
+{% block title %} Main page {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="wrap">
+        <div class="container main-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <a href="{{ url("_homepage") }}">
+                        <img class="thumbnail float-left" src="{{ 'img/empty_logo.png' | apply_filter('logo_mini') }}"  />
+                    </a>
+
+                    <div class="pull-right">
+
+                        {% if app.user != null %}
+
+                            <a href="{{ path('fos_user_profile_show') }}">
+                              <img class="thumbnail float-left" src="{{ 'img/user/avatar_1.png' | apply_filter('user_profile_mini') }}"
+                                 title="{{ app.user.username }}" alt="{{ app.user.username }}" />
+                            </a>
+
+                            <a href="{{ path('fos_user_security_logout') }}" class="btn btn-default navbar-btn glyphicon glyphicon-log-out">
+                                
+                            </a>
+                        {% else %}
+                            <a href="{{ path('fos_user_security_login') }}" class="btn btn-default navbar-btn">
+                                {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+                            </a>
+                            <a class="btn btn-default navbar-btn"  href="{{ path('fos_user_registration_register') }}">
+                                {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
+                            </a>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </nav>
+
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'LearningFrontBundle::layout.html.twig' %}
+
+
+{% block title %} Main page {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="wrap">
+        <div class="container main-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    {#<div class="navbar-header">#}
+                    {#<a class="navbar-brand" href="#">#}
+                    {#<img alt="learning" src="">#}
+                    {#</a>#}
+                    {#</div>#}
+
+                    <div class="pull-left">
+                        <a class="navbar-brand" href="#">Admin panel</a>
+                    </div>
+
+                    <div class="pull-right">
+                        <a class="btn btn-default navbar-btn"  href="{{ path('_admin_groups') }}">
+                            Groups
+                        </a>
+                        <a class="btn btn-default navbar-btn"  href="{{ path('_admin_homepage') }}">
+                           Settings
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            {#<nav>#}
+                {#<ul class="pagination">#}
+                    {#<li>#}
+                        {#<a href="#" aria-label="Previous">#}
+                            {#<span aria-hidden="true">&laquo;</span>#}
+                        {#</a>#}
+                    {#</li>#}
+                    {#<li><a href="#">1</a></li>#}
+                    {#<li><a href="#">2</a></li>#}
+                    {#<li><a href="#">3</a></li>#}
+                    {#<li><a href="#">4</a></li>#}
+                    {#<li><a href="#">5</a></li>#}
+                    {#<li>#}
+                        {#<a href="#" aria-label="Next">#}
+                            {#<span aria-hidden="true">&raquo;</span>#}
+                        {#</a>#}
+                    {#</li>#}
+                {#</ul>#}
+            {#</nav>#}
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}

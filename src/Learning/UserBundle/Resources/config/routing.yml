@@ -1,0 +1,15 @@
+#_profile_home:
+#    path:     /profile
+#    defaults: { _controller: LearningUserBundle:Profile:profile }
+#
+#_profile_edit:
+#    path:     /profile/edit
+#    defaults: { _controller: LearningUserBundle:Profile:edit }
+
+_profile_messages:
+    path:     /profile/messages
+    defaults: { _controller: LearningUserBundle:Profile:messages }
+
+_profile_settings:
+    path:     /profile/settings
+    defaults: { _controller: LearningUserBundle:Profile:settings }

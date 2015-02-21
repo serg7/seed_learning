@@ -1,0 +1,33 @@
+Learning\UserBundle\Entity\User:
+    type:  entity
+    table: _user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    fields:
+        firstName:
+            type: string
+            column: first_name
+            length: 50
+            nullable: true
+
+        lastName:
+            type: string
+            column: last_name
+            length: 50
+            nullable: true
+
+    manyToMany:
+        groups:
+            targetEntity: Group
+            joinTable:
+                name: user_group
+                joinColumns:
+                    user_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    group_id:
+                        referencedColumnName: id

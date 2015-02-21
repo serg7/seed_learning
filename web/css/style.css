@@ -1,0 +1,73 @@
+
+body {
+    font-family: Arial, Helvetica, Sans Serif;
+    font-size: 16px;
+    background: #ffffee;
+}
+
+.main-container {
+    width: 1300px;
+    height: 1500px;
+    border: 1px solid #f1f0fa;
+    background: #f1f0fa;
+}
+
+.profile-container {
+    width: 1300px;
+    height: 1500px;
+    border: 1px solid #f1f0fa;
+    background: #f6f6f6;
+}
+
+.login-form {
+    background: none repeat scroll 0 0 #f1f0fa;
+    min-height: 200px;
+    margin: 190px auto;
+    padding: 30px;
+    width: 311px;
+}
+
+.register-form {
+    background: none repeat scroll 0 0 #f1f0fa;
+    min-height: 450px;
+    margin: 190px auto;
+    padding: 30px;
+    width: 411px;
+}
+
+
+.table.table-groups {
+    text-align: center;
+    width: 60% !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.navbar .thumbnail {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+
+.profile-container .main-panel > .panel-body {
+    height: 700px;
+}
+.profile-container .main-panel .top-block
+{
+    height: 200px;
+}
+
+.profile-container .main-panel .tab-content > .tab-pane {
+    padding: 20px;
+}
+
+.navbar .navbar-btn {
+    margin-bottom: 8px;
+    margin-top: 7px;
+}

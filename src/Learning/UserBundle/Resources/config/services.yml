@@ -1,0 +1,9 @@
+services:
+#    learning_user.example:
+#        class: Learning\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    learning.registration.form.type:
+        class: Learning\UserBundle\Form\Type\RegistrationFormType
+        tags:
+            - { name: form.type, alias: learning_user_registration }

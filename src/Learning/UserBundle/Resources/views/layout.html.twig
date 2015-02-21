@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/dist/css/bootstrap-theme.css') }}">
+    {% block stylesheets %} {% endblock %}
+</head>
+<body>
+  <div class="wrap">
+
+    {% for type, messages in app.session.flashBag.all %}
+      {% for message in messages %}
+          <div class="{{ type }}">
+            {{ message|trans({}, 'FOSUserBundle') }}
+          </div>
+      {% endfor %}
+    {% endfor %}
+
+    <div class="container">
+      {% block fos_user_content %}
+      {% endblock fos_user_content %}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Learning\UserBundle\Entity\Group:
+    type:  entity
+    table: _group
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO

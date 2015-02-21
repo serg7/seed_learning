@@ -1,0 +1,46 @@
+{% extends "LearningUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+
+   {% if app.user != null %}
+     {{ app.user.username }}
+   {% else %}
+
+   {% endif %}
+
+   <form action="{{ path("fos_user_security_check") }}" method="post" class="form-horizontal login-form">
+
+      {% if error %}
+          <div class="alert alert-warning alert-dismissible" role="alert">
+             {{ error.messageKey|trans(error.messageData, 'security') }}
+          </div>
+      {% endif %}
+
+      <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+      <div class="form-group">
+         <label for="username" class="sr-only">{{ 'security.login.username'|trans }}</label>
+         <div class="col-sm-12">
+            <input type="text" class="form-control" id="username" name="_username" placeholder="last username" value="{{ last_username }}" required="required" />
+         </div>
+      </div>
+
+      <div class="form-group">
+         <label class="sr-only" for="password">{{ 'security.login.password'|trans }}</label>
+         <div class="col-sm-12">
+            <input type="password" class="form-control" id="password" placeholder="password" name="_password" required="required" />
+         </div>
+      </div>
+
+      <div class="checkbox">
+         <label>
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on"> Remember me
+         </label>
+      </div>
+
+      <input class="btn btn-default btn-block" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+   </form>
+
+{% endblock fos_user_content %}
